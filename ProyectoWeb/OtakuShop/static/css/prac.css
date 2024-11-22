@@ -1,0 +1,68 @@
+.img-main{
+    height: 8rem;
+    padding-top: 15px;
+}
+
+.cont-img{
+display: flex;
+width: 8.5rem;
+justify-content: space-around;
+
+}
+.card {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.img-carrito {
+    width: 4rem;
+    border-radius: 1rem;
+}
+
+.carrito-acciones {
+    margin: auto;
+    margin-right: 20px;
+}
+.carrito-acciones-total {
+    display: flex;
+    align-items: center; 
+    margin-right: 1rem;
+}
+
+.numerito {
+    margin-left: 3px;
+}
+
+.cont-total-pagar {
+    display: flex;
+}
+
+.boton-carrito {
+    background-color: white;
+    margin-left: 10px;
+    border-radius: 0.5rem;
+    
+}
+
+
+
+.carritoVacio {
+    font-weight: 900;
+    font-size: italic;
+    margin-top: 1rem;
+}
+
+
+.modal {
+    width: 100%;
+    height: auto;  
+    background-color: #98a2a8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;  
+    display: none;
+  }

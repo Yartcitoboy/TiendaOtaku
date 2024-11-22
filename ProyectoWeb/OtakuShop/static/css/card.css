@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+
+.card__icon{
+    font-size: 1.5rem;
+    color: #161616;
+    margin: 0 10px;
+}
+.card__icon:hover{
+    color: #FF5151;
+}
+.card__precis{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: .5s;
+}
+.card__preci{
+    display: block;
+    text-align: center;
+}
+.card__preci--before{
+    font-size: 0.75rem;
+    color: #FF5151;
+    margin-bottom: .25rem;
+    text-decoration: line-through;
+}
+.card__preci--now{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card{
+    margin-top: 100px;
+}
+
+.ofertas{
+    text-align: center;
+    padding-top: 50px;
+    color: black;
+    font-size: 3rem;
+    font-family: fantasy;
+    text-decoration: underline;
+}
+
+.container-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 50px 0;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-text{
+    font-size: 15px;
+    text-align: center;
+}
+
+.btn1{
+    width: 100%;
+    border: none;
+}

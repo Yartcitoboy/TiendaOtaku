@@ -1,0 +1,46 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block estilos %}
+<link rel="stylesheet" type="text/css" href="slide navbar style.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/L-R.css' %}">
+{% endblock estilos %}
+
+{% block contenido %}
+<div class="container">
+    <div class="main">
+        <div class="signup">
+            <form action="" id="signupForm" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="hidden" name="next" value="{{ next }}" />
+                <button type="submit">Ingresar</button>
+            </form>
+
+            {% if form.errors %}
+            <ul>
+                {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                <li>{{ field|title }}: {{ error }}</li>
+                {% endfor %}
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+
+        <div class="notification" id="notify">
+            <div class="notification-text" id="notification">
+                <i id="icon" class="icon fa fa-exclamation-triangle">&nbsp;&nbsp;</i>
+                <p id="message"></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}
+{% block js %}
+<!-- <script src="{% static 'js/L-R.js' %}"></script> -->
+<script src="{% static 'js/zxcvbnm' %}"></script>
+<script src="{% static 'js/run' %}"></script>
+<script src="{% static 'js/restricciones' %}"></script>
+{% endblock js %}

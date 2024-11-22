@@ -1,0 +1,39 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'css/perfil.css' %}">
+{% endblock estilos %}
+
+{% block contenido %}
+
+<!-- ESTO HACE QUE CUANDO TE REGISTRAS ESTOS DATOS VAYAN AL PERFIL Y SE GUARDE EL NAME,LAST NAME Y EMAIL-->
+
+<div class="container">
+    <header class="perfil">
+    <img class="perfil-foto mb-4" src="{% static 'img/perfil/meme.jpeg' %}" />
+    <div class="titulo mb-3">
+        <h1>{{ user.username }}</h1>
+        <h3>Instrutor de TFT para el Charlie</h3>
+    </div>
+    </header>
+
+    <main class="projetos">
+    <ul class="mb-2">Informacion<ul>
+        <li><p>Nombre: {{ user.first_name }}</p></li>
+        <li><p>Apellido: {{ user.last_name }}</p></li>
+        <li><p>Email: {{ user.email }}</p></li>
+    </main>
+</div>
+</div>
+
+{% endblock contenido %}
+{% block js %}
+
+{% endblock js %}
+
+
+
+
+
+

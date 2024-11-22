@@ -1,0 +1,66 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block estilos %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/producto.css' %}">
+{% endblock estilos %}
+
+{% block contenido %}
+<div class="container">
+
+    <div class="main product-slider">
+        <div class="slider slider-for">
+            <div class="image-container large">
+                <img src="{% static 'img/Productos/Carnet-perso.jpeg' %}" alt="Carnet personalizado">
+            </div>
+            <div class="image-container large">
+                <img src="{% static 'img/Productos/Cubre-cama.jpeg' %}" alt="Cubre cama">
+            </div>
+            <div class="image-container large">
+                <img src="{% static 'img/Productos/Lampara-led.jpeg' %}" alt="">
+            </div>
+            <div class="image-container large">
+                <img src="{% static 'img/Productos/Tazon.jpeg' %}" alt="">
+            </div>
+            <div class="image-container large">
+                <img src="{% static 'img/Productos/Zapatillas.jpeg' %}" alt="">
+            </div>
+            <div class="image-container large">
+                <img src="{% static 'img/Productos/almohada.jpeg' %}" alt="">
+            </div>
+            <div class="image-container large">
+                <img src="{% static 'img/Productos/vaso-onepiece.jpeg' %}" alt="">
+            </div>
+            <div class="image-container large">
+                <img src="{% static 'img/Productos/paragua.jpeg' %}" alt="">
+            </div>
+            <div class="image-container large">
+                <img src="{% static 'img/Productos/cojin.jpeg' %}" alt="">
+            </div>
+            <div class="image-container large">
+                <img src="{% static 'img/Productos/termo.jpeg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="slider slider-nav">
+            <div class="image-container small"><img src="{% static 'img/Productos/Carnet-perso.jpeg' %}" alt=""></div>
+            <div class="image-container small"><img src="{% static 'img/Productos/Cubre-cama.jpeg' %}" alt=""></div>
+            <div class="image-container small"><img src="{% static 'img/Productos/Lampara-led.jpeg' %}" alt=""></div>
+            <div class="image-container small"><img src="{% static 'img/Productos/Tazon.jpeg' %}" alt=""></div>
+            <div class="image-container small"><img src="{% static 'img/Productos/Zapatillas.jpeg' %}" alt=""></div>
+            <div class="image-container small"><img src="{% static 'img/Productos/almohada.jpeg' %}" alt=""></div>
+            <div class="image-container small"><img src="{% static 'img/Productos/vaso-onepiece.jpeg' %}" alt=""></div>
+            <div class="image-container small"><img src="{% static 'img/Productos/paragua.jpeg' %}" alt=""></div>
+            <div class="image-container small"><img src="{% static 'img/Productos/cojin.jpeg' %}" alt=""></div>
+            <div class="image-container small"><img src="{% static 'img/Productos/termo.jpeg' %}" alt=""></div>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>  
+<script src="{% static 'js/producto.js' %}"></script>
+{% endblock js %}

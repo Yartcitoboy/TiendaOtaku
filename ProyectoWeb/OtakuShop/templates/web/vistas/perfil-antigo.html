@@ -1,0 +1,42 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block estilos %}
+<link rel="stylesheet" type="text/css" href="slide navbar style.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/L-R.css' %}">
+{% endblock estilos %}
+
+<!-- ESTO YA NO SIRVE, PERO NO SE SI LO BORRO PASARA ALGO MALO :V-->
+
+{% block contenido %}
+    <div class="container">
+        <div class="main">
+    
+            <div class="signup">
+                <form action="{% url 'perfil' %}" id="signupForm" method="post"> 
+                    {% csrf_token %}
+                    <label for="chk" aria-hidden="true">Registrate</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre de Usuario" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="number" id="fono" name="fono" placeholder="Celular" required>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+    
+            <div class="notification" id="notify">
+                <div class="notification-text" id="notification">
+                  <i id="icon" class="icon fa fa-exclamation-triangle">&nbsp;&nbsp;</i>
+                  <p id="message"></p>
+                </div>
+              </div>
+        </div>
+    </div>
+{% endblock contenido %}
+{% block js %}
+<!-- <script src="{% static 'js/L-R.js' %}"></script> -->
+<script src="{% static 'js/zxcvbnm' %}"></script>
+<script src="{% static 'js/run' %}"></script>
+<script src="{% static 'js/restricciones' %}"></script>
+{% endblock js %}

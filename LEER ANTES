@@ -1,0 +1,18 @@
+Para empezar debes de ver los video del freddy para poder entender algo, yo llegue solamente al 17 usando los block
+por ejemplo. {block contenido} a eso me refiero, lo mismo pasa para hacer el entorno de django.
+
+cuando llegue a enterder o veas el video y llegues a comporendir las plantillas ({block contendio}) puedes ver el codigo
+pero si no quieres sera cosa tuya uwu.
+
+para empezar, para que puedas entrar usa el cmd, debes entrar en la carpeta web, despues entra en el ambiente virtual
+usando algo asi Diva\Scripts\activate, cuando entres a ambiente entra a carpeta proyectoweb y corres el server
+
+cuando estes detro prueba la pagina, antes no te dejare ver las demas vista sin antes de loguearte, por lo debes crear 
+una cuenta o usas la mia que es yartc y la pass es 12345 y te dejara entrar, en caso de crear cuenta..
+intenta qie la contraseña contenga más de 10 caracteres .. si no lo haces igual te dejara loguerte pero no te dejara entrar
+es extraño.
+
+despues revisa el proyecto desde abajo hacia arriba asi lo entiendes mejor, lo que no comente es algo que ya se deberia saber
+y ya paso lo que la mayoria deberia saber, lo que comente ya es algo que es dificil de comoprender..
+
+si no entindes algo dimelo.

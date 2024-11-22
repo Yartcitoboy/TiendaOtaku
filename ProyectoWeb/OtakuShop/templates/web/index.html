@@ -1,0 +1,238 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'css/card.css' %}" />
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/prac.css' %}">
+{% endblock estilos %}
+
+{% block contenido %}
+    <main>
+        <section class="section-1 py-5">
+            <div class="container">
+                {% if request.user.is_authenticated %}
+                <h2 class="mr-5">{{user.username | upper }} BIENVENIDO A OTAKUSHOP</h2>
+                {% endif %}
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h2>Nuevos Lanzamientos</h2>
+                                    <p>Descubre nuestros últimos productos.</p>
+                                    <button class="btn btn-primary">Ver Más</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="image-container">
+                                        <img src="{% static 'img/carrusel/Mushoku Tensei.jpeg' %}" class="d-block w-100"
+                                            alt="Imagen 1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h2>Nuevos Lanzamientos</h2>
+                                    <p>Descubre nuestros últimos productos.</p>
+                                    <button class="btn btn-primary">Ver Más</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="image-container">
+                                        <img src="{% static 'img/carrusel/Rimuru.jpeg' %}" class="d-block w-100" alt="Imagen 2" />
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h2>Nuevos Lanzamientos</h2>
+                                    <p>Descubre nuestros últimos productos.</p>
+                                    <button class="btn btn-primary">Ver Más</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="image-container">
+                                        <img src="{% static 'img/carrusel/Sao.jpeg' %}" class="d-block w-100" alt="Imagen 3" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h2>Nuevos Lanzamientos</h2>
+                                    <p>Descubre nuestros últimos productos.</p>
+                                    <button class="btn btn-primary">Ver Más</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="image-container">
+                                        <img src="{% static 'img/carrusel/hero shiled.jpeg' %}" class="d-block w-100"
+                                            alt="Imagen 4" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEGUNDA SECTION -->
+
+        <section class="section-2">
+            <h2 class="sec-title-1">Productos</h2>
+            <h5 class="sec-text">Explora nuestras diferentes categorias.</h5>
+
+            <div class="container-cards">
+                <div class="card mx-5" style="width: 18rem;">
+                    <img src="{% static 'img/Categoria/Ropa.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title-2">Ropa</h5>
+                        <p class="card-text-2">Explora nuestra selecion de ropa que tenemos para ti.</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn1">Ver Más</button>
+                    </div>
+                </div>
+
+                <div class="card mx-5" style="width: 18rem;">
+                    <img src="{% static 'img/Categoria/Figura.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title-2">Figuras</h5>
+                        <p class="card-text-2">Descubre nuestras figuras que te encantaran.</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn1">Ver Más</button>
+                    </div>
+                </div>
+
+                <div class="card mx-5" style="width: 18rem;">
+                    <img src="{% static 'img/Categoria/mangas.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title-2">Mangas</h5>
+                        <p class="card-text-2">Explora nuestra inmesa coleccion de mangas.</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn1">Ver Más</button>
+                    </div>
+                </div>
+
+                <div class="card mx-5" style="width: 18rem;">
+                    <img src="{% static 'img/Categoria/Accesorios.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title-2">Accesorios</h5>
+                        <p class="card-text-2">Revisa nuestros accesorios que tenemos.</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn1">Ver Más</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TERCERA SECTION -->
+
+        <section class="section-3 my-5">
+            <h2 class="sec-title">Ofertas</h2>
+            <h5 class="sec-text">No te piedas nuestras ofertas especiales.</h5>
+            <div class="container-cards">
+                <div class="card mx-5" style="width: 18rem;">
+                    <img src="{% static 'img/cards/Boku-o-Hero.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Himiko Toga</h5>
+                        <p class="card-text">Himiko Toga, con su cabello rubio y sonrisa juguetona, es una villana que
+                            oculta sus verdaderas intenciones en Boku no Hero.</p>
+                    </div>
+                    <div class="card__precis">
+                        <a href="#" class="card__icon">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </a>
+                        <div>
+                            <span class="card__preci card__preci--before">$9990</span>
+                            <span class="card__preci card__preci--now">$7490</span>
+                            <input type="number" value="1" min="1" max="10" class="form-control cantidad">
+                        </div>
+                        <a href="#" class="card__icon add-to-cart">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card mx-5" style="width: 18rem;">
+                    <img src="{% static 'img/cards/Kakegurui.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Yumeko Jabami</h5>
+                        <p class="card-text">Yumeko Jabami, con su cabello negro y expresión intrigante, encarna la
+                            emoción del juego y la astucia en Kakegurui.</p>
+                    </div>
+                    <div class="card__precis">
+                        <a href="" class="card__icon"><ion-icon name="heart-outline"></ion-icon></a>
+                        <div>
+                            <span class="card__preci card__preci--before">$9990</span>
+                            <span class="card__preci card__preci--now">$7490</span>
+                            <input type="number" value="1" min="1" max="10" class="form-control cantidad">
+                        </div>
+                        <a href="" class="card__icon add-to-cart"><ion-icon name="cart-outline"></ion-icon></a>
+                    </div>
+                </div>
+
+                <div class="card mx-5" style="width: 18rem;">
+                    <img src="{% static 'img/cards/Overlord.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ainz Ooal Gown</h5>
+                        <p class="card-text">Ainz Ooal Gown, con su armadura oscura y aura dominante, es el temido señor
+                            de Nazarick en Overlord.</p>
+                    </div>
+                    <div class="card__precis">
+                        <a href="" class="card__icon"><ion-icon name="heart-outline"></ion-icon></a>
+                        <div>
+                            <span class="card__preci card__preci--before">$9990</span>
+                            <span class="card__preci card__preci--now">$7490</span>
+                            <input type="number" value="1" min="1" max="10" class="form-control cantidad">
+                        </div>
+                        <a href="" class="card__icon add-to-cart"><ion-icon name="cart-outline"></ion-icon></a>
+                    </div>
+                </div>
+
+                <div class="card mx-5" style="width: 18rem;">
+                    <img src="{% static 'img/cards/Sao-Bullet.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Llenn</h5>
+                        <p class="card-text">Llenn, con su cabello rosado y uniforme de caballero, muestra coraje y
+                            lealtad en Sword Art Online: Gun Gale Online.</p>
+                    </div>
+                    <div class="card__precis">
+                        <a href="" class="card__icon"><ion-icon name="heart-outline"></ion-icon></a>
+                        <div>
+                            <span class="card__preci card__preci--before">$9990</span>
+                            <span class="card__preci card__preci--now">$7490</span>
+                            <input type="number" value="1" min="1" max="10" class="form-control cantidad">
+                        </div>
+                        <a href="" class="card__icon add-to-cart"><ion-icon name="cart-outline"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock contenido %}
+{% block js %}
+<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'js/carrito.js' %}"></script>
+{% endblock js %}
+

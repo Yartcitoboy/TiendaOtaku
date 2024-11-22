@@ -1,0 +1,54 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    font-family: Arial;
+    width: 80%;
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-container {
+    width: 100%;
+    position: relative;
+}
+
+.image-container.large {
+    height: 500px; 
+}
+
+.image-container-large img{
+    margin: 10px 0 0 70px;
+}
+
+.image-container.small {
+    height: 150px;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Estilo para las flechas del slider */
+.slick-prev:before,
+.slick-next:before {
+    color: black; 
+}
+
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+    color: gray; 
+}
+

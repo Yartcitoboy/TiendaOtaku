@@ -1,0 +1,44 @@
+/* Estilo personalizado para la barra de navegación */
+.custom-navbar {
+    background-color: #4CAF50; /* Cambia este valor por el color de fondo deseado */
+    border-color: #4CAF50; /* Cambia este valor para que coincida con el color de fondo */
+  }
+  
+  .custom-navbar .navbar-brand,
+  .custom-navbar .navbar-nav > li > a,
+  .custom-navbar .dropdown-toggle {
+    color: #FFFFFF !important; /* Cambia este valor por el color de texto deseado */
+  }
+  
+  .custom-navbar .navbar-nav > li > a:hover,
+  .custom-navbar .navbar-nav > li > a:focus,
+  .custom-navbar .dropdown-toggle:hover,
+  .custom-navbar .dropdown-toggle:focus {
+    color: #FFD700 !important; /* Cambia este valor por el color de texto al pasar el mouse */
+  }
+  
+  .custom-navbar .dropdown-menu {
+    background-color: #4CAF50; /* Cambia este valor por el color de fondo deseado */
+  }
+  
+  .custom-navbar .dropdown-menu .form-control {
+    background-color: #333; /* Fondo del input dentro del dropdown */
+    color: #fff; /* Color del texto dentro del input */
+  }
+  
+  .custom-navbar .dropdown-menu .btn {
+    background-color: #FFD700; /* Color del botón dentro del dropdown */
+    color: #4CAF50; /* Color del texto del botón dentro del dropdown */
+  }
+  
+  /* Ajustar posición de dropdown */
+  .custom-navbar .navbar-nav .dropdown {
+    margin-right: 15px; /* Ajusta este valor para mover el dropdown a la derecha */
+  }
+  
+  /* Ajustar tamaño del logo */
+  .navbar-logo {
+    max-height: 50px; /* Ajusta este valor según sea necesario */
+    width: auto; /* Mantiene la proporción de la imagen */
+  }
+  

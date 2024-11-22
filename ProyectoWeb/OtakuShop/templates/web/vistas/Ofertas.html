@@ -1,0 +1,136 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'css/Ofertas.css' %}">
+<link rel="stylesheet" href="{% static 'css/card.css' %}">
+<link rel="stylesheet" href="{% static 'css/prac.css' %}">
+{% endblock estilos %}
+
+{% block contenido %}
+
+<!-- ESTO ESTA CON BOOSTRAP Y OTRO ELEMENTO QIE SE DESCARGO PARA PODER USA ICONOS Y ESAS COSAS -->
+
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col" id="cards">
+            <button onclick="resetFilters('')" class="btn btn-primary">Todos</button>
+            <button onclick="filterCards('accion')" class="btn btn-outline-primary">Acción</button>
+            <button onclick="filterCards('aventura')" class="btn btn-outline-primary">Aventura</button>
+            <button onclick="filterCards('ficcion')" class="btn btn-outline-primary">Ciencia ficción</button>
+        </div>
+        <div class="col text-right ">
+            <label class="btn btn-primary" for="precio">Filtrar por precio:</label>
+            <input onchange="filterCardsByPrice(this.value)" class="btn btn-outline-primary" type="number" id="precio" min="0">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-lg-3">
+            <div class="card card-aventura" data-precio="7490" style="width: 17rem;">
+                <div class="text-center mb-3">
+                    <img src="{% static 'img/Ofertas/Peluche Pikachu - 25 cm.jpeg' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Peluche Pikachu</h5>
+                    <span class="mr-2">&#9733; 4.8</span>
+                    <p class="card-text">Peluche suave y esponjoso de Pikachu, el Pokémon eléctrico.</p>
+                </div>
+                <div class="card__precis">
+                    <a href="#" class="card__icon">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </a>
+                    <div>
+                        <span class="card__preci card__preci--before">$9990</span>
+                        <span class="card__preci card__preci--now">$7490</span>
+                        <input  type="number" value="1" min="1" max="10" class="form-control cantidad">
+                    </div>
+                    <a href="#" class="card__icon add-to-cart">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <div class="card card-accion" data-precio="19990" style="width: 17rem;">
+                <div class="text-center mb-3">
+                    <img src="{% static 'img/Ofertas/Figura-naruto.jpeg' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Figura de Naruto</h5>
+                    <span class="valor">&#9733; 4.8</span>
+                    <p class="card-text">Figura de acción de Naruto Uzumaki con el equipo N°7.</p>
+                </div>
+                <div class="card__precis">
+                    <a href="#" class="card__icon">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </a>
+                    <div>
+                        <span class="card__preci card__preci--before">$25990</span>
+                        <span class="card__preci card__preci--now">$19990</span>
+                        <input type="number" value="1" min="1" max="10" class="form-control cantidad">
+                    </div>
+                    <a href="#" class="card__icon add-to-cart">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div><div class="col-md-4 col-lg-3">
+            <div class="card card-ficcion" data-precio="10490" style="width: 17rem;">
+                <div class="text-center mb-3">
+                    <img src="{% static 'img/Ofertas/Cowboy Bebop (1998).jpeg' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Poster de Cowboy Bebop</h5>
+                    <span class="mr-2">&#9733; 4.1</span>
+                    <p class="card-text">Poster con la icónica imagen de los personajes de Cowboy Bebop.</p>
+                </div>
+                <div class="card__precis">
+                    <a href="#" class="card__icon">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </a>
+                    <div>
+                        <span class="card__preci card__preci--before">$12990</span>
+                        <span class="card__preci card__preci--now">$10490</span>
+                        <input type="number" value="1" min="1" max="10" class="form-control cantidad">
+                    </div>
+                    <a href="#" class="card__icon add-to-cart">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div><div class="col-md-4 col-lg-3">
+            <div class="card card-aventura" data-precio="8490" style="width: 17rem;">
+                <div class="text-center mb-3">
+                    <img src="{% static 'img/Ofertas/llavero sailor-moon.jpeg' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Llavero de Sailor Moon</h5>
+                    <span class="mr-2">&#9733; 4.7</span>
+                    <p class="card-text">Llavero con la imagen de Sailor Moon, la heroína de la luna.</p>
+                </div>
+                <div class="card__precis">
+                    <a href="#" class="card__icon">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </a>
+                    <div>
+                        <span class="card__preci card__preci--before">$9990</span>
+                        <span class="card__preci card__preci--now">$8490</span>
+                        <input type="number" value="1" min="1" max="10" class="form-control cantidad">
+                    </div>
+                    <a href="#" class="card__icon add-to-cart">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock contenido %}
+{% block js %}
+<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+<script src="{% static 'js/Ofertas.js' %}"></script>
+{% endblock js %}
+
+

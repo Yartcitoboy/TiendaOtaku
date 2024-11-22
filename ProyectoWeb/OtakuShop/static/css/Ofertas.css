@@ -1,0 +1,33 @@
+.card {
+  margin-bottom: 30px;
+}
+.card-img-top {
+  width: 270px;
+  height: 300px;
+  object-fit: cover;
+}
+.card__precis {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 15px;
+}
+.card__icon {
+  font-size: 1.5rem;
+  color: #333;
+}
+.card__preci--before {
+  text-decoration: line-through;
+  color: #ff0000;
+  margin-right: 5px;
+}
+.card__preci--now {
+  color: #007bff;
+  font-weight: bold;
+}
+.cantidad {
+  width: 50px;
+}
+.card-body, .valor{
+    text-align: center;
+}
